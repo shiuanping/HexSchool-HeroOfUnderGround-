@@ -1,0 +1,25 @@
+{
+"manifest_version": 2,
+"name": "幹話產生器",
+"description": "[六角學院 — JS 新手地下城] — 10F Chrome extension（幹話生產器）",
+"version": "1.0",
+"author": "ShiuanPing",
+"icons": {
+"16": "./icon/extention-icon-16px.png",
+"64": "./icon/extention-icon-64px.png"
+},
+"browser_action": {
+"default_popup": "./html/popup.html",
+"default_icon": {
+"64": "./icon/extention-icon-64px.png",
+"128": "./icon/extention-icon-128px.png"
+}
+},
+"chrome_url_overrides": {"newtab": "./html/newtab.html" },
+"permissions": [
+"activeTab",
+"storage", 
+"unlimitedStorage"
+],
+"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

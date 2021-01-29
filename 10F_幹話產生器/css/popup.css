@@ -1,0 +1,192 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', serif;
+}
+
+.wrap{
+    width: 322px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+.barHeader{
+    padding: 24px 0;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.barHeader h2{
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.changeStyleBtn{
+    width: 65px;
+    height: 32px;
+    padding: 4px;
+    background-color: rgb(237, 237, 237, 0.7);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.6s ease 0s;
+}
+
+
+.btnCircle{
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 4px;
+    transition: all 0.6s ease 0s
+}
+
+.changeStyleBtn.dark .btnCircle{
+    left: calc(100%);
+    transform: translateX(calc(-100% - 4px));
+}
+
+.tableTitle{
+    padding: 24px 0;
+}
+
+.tableTitle h3{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.add{
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 16px 0;
+    background-color: #000;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+}
+.add i{
+    font-size: 24px;
+    margin-right: 24px;
+}
+
+.barFooter{
+    padding: 8px 0;
+}
+.barInner input{
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.barFooter input::placeholder{
+    color: #878787;
+}
+.tableTitle{
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: bold;
+    padding: 16px 0;
+    border-bottom: 2px solid #000;
+}
+.quoteTable{
+    height: 292px;
+    overflow: auto;
+    margin-bottom: 16px;
+}
+.quoteTable li{
+    font-style: italic;
+    border-bottom: 2px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.quoteTable p{
+    width: 80%;
+    padding: 17px 0;
+}
+.quoteTable::-webkit-scrollbar{
+    display:none
+  }
+input{
+    font-size: 16px;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    background-color: transparent;
+    outline: none;
+    border-width: 0;
+}
+.editInput{
+    width: 80%;
+    padding: 17px 0;
+}
+.fnLis{
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quoteTable a{
+    color: #000;
+    display: block;
+    padding: 2px;
+}

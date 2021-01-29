@@ -1,0 +1,372 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body{
+  font-family: 'Roboto', serif;
+}
+
+.wrap{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+  overflow-x: hidden;
+  transition: all 0.6s ease 0s
+}
+
+main{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  opacity: 1;
+  z-index: 1;
+}
+
+.banner{
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transition: all 0.6s ease 0s;
+}
+
+.withSidebar{
+  width: 60%;
+  right: 40%;
+}  
+
+.banner div{
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1552057008-518700a52ad0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=701&q=80');
+  background-size: cover;
+  background-position: center 40% ;
+  transition: all 0.6s ease 0s
+}
+
+.quote{
+  font-size: 160px;
+  position: absolute;
+  top: 17.6%;
+  left: 6%;
+}
+
+.sentence{
+  position: absolute;
+  top: 41%;
+  left: 14%;
+}
+
+.sentence p, .sentenceInput{
+  font-size: 56px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+  line-height: 72px;
+  display: inline-block;
+  background-color: #fff;
+}
+
+.sentence input{
+  width: 100%;
+  box-shadow: 10px 10px 0 0 #000
+}
+
+.confirmBlock{
+  display: flex;
+  position: absolute;
+  left: 24.7%;
+  bottom: 19%;
+  display: none;
+}
+
+.saveBtn, .cancleBtn{
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 21px;
+  border: 0;
+  outline: none;
+  padding: 16px 24px;
+  cursor: pointer;
+}
+.saveBtn{
+  color: #fff;
+  background-color: #000;
+}
+.cancleBtn{
+  color: #000;
+  background-color: #fff;
+}
+main .changeStyleBtn{
+  position: absolute;
+  bottom: 40px;
+  right: 7.2%;
+}
+
+.changeStyleBtn{
+  width: 65px;
+  height: 32px;
+  padding: 4px;
+  background-color: rgb(237, 237, 237, 0.7);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.6s ease 0s;
+}
+
+
+.btnCircle{
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  transition: all 0.6s ease 0s
+}
+
+.changeStyleBtn.dark .btnCircle{
+  left: calc(100%);
+  transform: translateX(calc(-100% - 4px));
+}
+
+.burgerBtn{
+  width: 46px;
+  height: 46px;
+  color: #fff;
+  padding: 5px 0;
+  border-radius: 20%;
+  position: absolute;
+  top: 52px;
+  right: 7.2%;
+}
+
+.burgerBtn:hover{
+  background-color: rgb(255, 255, 255, 0.2)
+}
+
+.burgerBtn i{
+  width: 100%;
+  height: 100%;
+  font-size: 36px;
+  text-align: center;
+}
+.hide{
+  transition: all 0.6s ease 0s;
+}
+main.hide, .edit.hide{
+  opacity: 0;
+}
+
+.edit{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  transition: all 0.6s ease 0s;
+}
+
+.addQuote{
+  width: 50%;
+  font-weight: bold;
+  position: absolute;
+  top: 45%;
+  left: 7%;
+}
+
+.addQuote h2{
+  color: #fff;
+  font-size: 56px;
+  line-height: 72px;
+  margin-bottom: 24px;
+}
+
+.addQuote form{
+  border-bottom: 1px solid #fff;
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+input{
+  font-size: 16px;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  background-color: transparent;
+  outline: none;
+  border-width: 0;
+}
+.addQuote input{
+  color: #fff;
+  width: calc(100% - 48px);
+  font-size: 24px; 
+}
+.add{
+  width: 48px;
+  height: 48px;
+  display: block;
+  padding: 5px;
+}
+.add i{
+  color: #fff;
+  font-size: 32px;
+}
+.sidebar{
+  width: 40%;
+  height: 100%;
+  background-color: #fff;
+  padding: 40px 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.6s ease 0s;
+}
+.sidebar.hide{
+  transform: translateX(100%);
+}
+
+.returnBtn{
+  color: #000;
+  font-size: 32px;
+  display: block;
+}
+
+.barInner{
+  padding: 50px 40px;
+}
+
+.sidebar h2{
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 31px;
+}
+
+.barHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.tableTitle{
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: bold;
+  padding: 16px 0;
+  border-bottom: 2px solid #000;
+}
+
+.quoteTable li{
+  font-style: italic;
+  border-bottom: 2px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quoteTable p{
+  width: 75%;
+  padding: 17px 0;
+}
+
+.editInput{
+  width: 68%;
+  padding: 17px 0;
+}
+.fnLis{
+  width: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+.quoteTable{
+  height: 260px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.quoteTable a{
+  color: #000;
+  display: block;
+  padding: 4px;
+}
+
+.quoteTable i{
+  font-size: 20px;
+}
+.barInner input{
+  font-style: italic;
+  
+}
+.barFooter{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.readMoreBtn{
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 21px;
+  padding: 8px 0;
+  background-color: transparent;
+  display: none;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}

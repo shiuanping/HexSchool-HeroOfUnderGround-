@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>新增分頁</title>
+<link rel="stylesheet" href="../css/newtab.css"/>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body>
+<div class="wrap">
+    <div class="banner">
+    <div></div>
+    </div>
+    <main> 
+    <span class="quote">“</span>
+    <div class="sentence">
+        <p>If you change nothing,</p>
+        <br>
+        <p>nothing will change.</p>
+    </div>
+    <div class="confirmBlock">
+        <button class="saveBtn">SAVE</button>
+        <button class="cancleBtn">CANCLE</button>
+    </div>
+    <div class="changeStyleBtn">
+        <div class="btnCircle"></div>
+    </div>
+    <a class="burgerBtn" href = "#"><i class="fas fa-bars"></i></a>
+    </main>
+    <div class="edit hide">
+    <div class="addQuote">
+        <h2>“ADD QUOTE”</h2>
+        <form>
+        <input class="inputNewQuote" type="text" placeholder="type something...">
+        <a href="#" class='add'><i class="fas fa-plus"></i></a>
+        </form>
+    </div> 
+    </div>
+    <div class="sidebar hide">
+        <a href="#" class="returnBtn"><i class="fas fa-arrow-right "></i></a>
+        <div class="barInner">
+            <div class="barHeader">
+                <h2>Dark mode</h2>
+                <div class="changeStyleBtn">
+                <div class="btnCircle"></div>
+                </div>
+            </div>
+            <div class="tableTitle">
+                <h3>Quotes</h3>
+            </div>
+            <ul class="quoteTable"></ul>
+            <div class="barFooter">
+                <button class='readMoreBtn'>LOAD MORE</button>
+            </div>
+        </div>  
+    </div>
+</div>
+<script src="../script/stroage.js"></script>
+<script src="../script/newtab.js"></script>
+</body>
+</html>
